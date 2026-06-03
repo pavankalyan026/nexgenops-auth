@@ -48,11 +48,17 @@ def validate_password(password: str):
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(
+    request=request,
+    name="index.html"
+)
 
 @app.get("/register", response_class=HTMLResponse)
 def register_page(request: Request):
-    return templates.TemplateResponse("register.html", {"request": request})
+    return templates.TemplateResponse(
+    request=request,
+    name="register.html"
+    )
 
 @app.post("/register/individual")
 def register_individual(data: IndividualRegister, db: Session = Depends(get_db)):
@@ -169,8 +175,9 @@ def dashboard(request: Request, access_token: str = Cookie(None)):
         return RedirectResponse(url="/login-page")
 
     return templates.TemplateResponse(
-        "dashboard.html", 
-        {"request": request, "user": payload}
+    request=request,
+    name="dashboard.html",
+    context={"user": payload}
     )
 
 @app.get("/logout")
