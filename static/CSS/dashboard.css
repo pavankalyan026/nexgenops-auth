@@ -1,0 +1,55 @@
+body{
+
+margin:0;
+
+display:flex;
+
+font-family:Segoe UI;
+
+background:#0f172a;
+
+color:white;
+
+}
+
+.sidebar{
+
+width:250px;
+
+height:100vh;
+
+background:#111827;
+
+padding:20px;
+
+}
+
+.sidebar ul{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.sidebar li{
+
+margin:20px 0;
+
+}
+
+.sidebar a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.content{
+
+padding:30px;
+
+flex:1;
+
+}
