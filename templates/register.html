@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NexgenOps Registration</title>
+
+<link rel="stylesheet"
+href="/static/css/register.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="glass-card">
+
+<h1>NexgenOps</h1>
+
+<p class="subtitle">
+Create your NexgenOps account
+</p>
+
+<div class="progress-container">
+
+<div class="progress-bar" id="progressBar">
+
+</div>
+
+</div>
+
+<div id="step1">
+
+<h2>Select Account Type</h2>
+
+<div class="card-container">
+
+<div class="select-card"
+onclick="selectAccount('Individual')">
+
+👤 Individual
+
+</div>
+
+<div class="select-card"
+onclick="selectAccount('Organization')">
+
+🏢 Organization
+
+</div>
+
+</div>
+
+</div>
+
+<div id="step2"
+style="display:none;">
+
+<h2>Select Organization Type</h2>
+
+<div class="org-grid">
+
+<div class="org-card"
+onclick="selectOrgType('Apartment')">
+
+🏠 Apartment
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('College')">
+
+🎓 College
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('School')">
+
+🏫 School
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('Hospital')">
+
+🏥 Hospital
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('Industry')">
+
+🏭 Industry
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('IT Company')">
+
+🏢 IT Company
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('MNC')">
+
+🌎 MNC
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('Warehouse')">
+
+📦 Warehouse
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('Commercial Building')">
+
+🏬 Commercial
+
+</div>
+
+<div class="org-card"
+onclick="selectOrgType('Government')">
+
+🏛 Government
+
+</div>
+
+</div>
+
+</div>
+
+<div id="step3"
+style="display:none;">
+
+<h2>Organization Details</h2>
+
+<input id="org_name"
+placeholder="Organization Name">
+
+<input id="official_email"
+placeholder="Official Email">
+
+<input id="official_mobile"
+placeholder="Official Mobile">
+
+<input id="country"
+placeholder="Country">
+
+<input id="state"
+placeholder="State">
+
+<input id="city"
+placeholder="City">
+
+<input id="address"
+placeholder="Address">
+
+<div id="dynamicFields">
+
+</div>
+
+<button onclick="nextOwner()">
+Continue
+</button>
+
+</div>
+
+<div id="step4"
+style="display:none;">
+
+<h2>Owner Details</h2>
+
+<input id="owner_name"
+placeholder="Full Name">
+
+<input id="designation"
+placeholder="Designation">
+
+<input id="owner_email"
+placeholder="Owner Email">
+
+<input id="owner_mobile"
+placeholder="Owner Mobile">
+
+<input id="password"
+type="password"
+placeholder="Password">
+
+<input id="confirm_password"
+type="password"
+placeholder="Confirm Password">
+
+<button onclick="registerOrganization()">
+
+Register Organization
+
+</button>
+
+</div>
+
+<div id="individualForm"
+style="display:none;">
+
+<h2>Individual Registration</h2>
+
+<input id="full_name"
+placeholder="Full Name">
+
+<input id="email"
+placeholder="Email">
+
+<input id="mobile"
+placeholder="Mobile">
+
+<input id="individual_password"
+type="password"
+placeholder="Password">
+
+<button onclick="registerIndividual()">
+
+Register
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/static/js/register.js"></script>
+
+</body>
+
+</html>

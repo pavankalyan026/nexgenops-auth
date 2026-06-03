@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NexgenOps Dashboard</title>
+
+<link rel="stylesheet"
+href="/static/css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>NexgenOps</h2>
+
+<ul>
+
+<li>Dashboard</li>
+
+<li>Profile</li>
+
+<li>Settings</li>
+
+<li>
+
+<a href="/logout">
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>
+
+Welcome
+
+</h1>
+
+<p>
+
+Logged in as:
+{{ user.role }}
+
+</p>
+
+<p>
+
+Email:
+{{ user.email }}
+
+</p>
+
+</div>
+
+</body>
+
+</html>
